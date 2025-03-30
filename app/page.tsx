@@ -4,16 +4,17 @@ import { ArrowRight, Instagram, Facebook, Twitter, Linkedin } from "lucide-react
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Icon } from "lucide-react"
 
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
       {/* Header */}
-      <header className="fixed top-0 z-40 w-full backdrop-blur-lg bg-background/80 border-b border-border/40">
+      <header className="fixed top-0 z-40 w-full backdrop-blur-lg bg-background/100 border-b border-border/40 supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-6">
             <Link href="/" className="flex items-center space-x-2">
-              <span className="text-xl font-bold text-primary">MUAFAR</span>
+              <span className="text-xl font-bold text-primary">Muafar</span>
             </Link>
             <nav className="hidden md:flex gap-6">
               <Link href="#how-it-works" className="text-sm font-medium transition-colors hover:text-primary">
@@ -26,6 +27,7 @@ export default function Home() {
                 Testimonials
               </Link>
             </nav>
+            
           </div>
           <div className="flex items-center gap-4">
             <Link href="#" className="text-sm font-medium transition-colors hover:text-primary">
@@ -41,18 +43,15 @@ export default function Home() {
         <section className="relative h-screen w-full overflow-hidden">
           <div className="absolute inset-0 bg-black/20 z-10"></div>
           <video className="absolute inset-0 w-full h-full object-cover" autoPlay muted loop playsInline>
-            <source src="/placeholder-video.mp4" type="video/mp4" />
+            <source src="/demo_video.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div className="container relative z-20 flex h-full flex-col items-center justify-center text-center">
-            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-white">
-              muafar
-            </h1>
-            <p className="mt-4 max-w-[700px] text-lg text-white md:text-xl">
+            <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl text-white">
               Save money. Reduce waste. Make a difference.
-            </p>
+            </h2>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-primary text-primary-foreground">
+              <Button disabled size="lg" className="bg-primary text-primary-foreground">
                 Download App
               </Button>
               <Button
@@ -60,9 +59,10 @@ export default function Home() {
                 variant="outline"
                 className="bg-white/10 backdrop-blur-sm text-white border-white/20 hover:bg-white/20"
               >
-                Business Sign Up
+                Register Interest
               </Button>
             </div>
+            <p className="text-white/65 text-sm mt-4">Coming soon to iOS and Android</p>
           </div>
         </section>
 
@@ -244,51 +244,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        {/* Testimonials */}
-        <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">What Our Community Says</h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Join thousands of satisfied users and businesses
-                </p>
-              </div>
-            </div>
-            <div className="mx-auto grid max-w-5xl gap-6 py-12 lg:grid-cols-3">
-              <Card>
-                <CardContent className="p-6">
-                  <p className="mb-4 italic text-muted-foreground">
-                    "I save around $50 a week on groceries while helping reduce food waste. It's a win-win!"
-                  </p>
-                  <p className="font-semibold">Sarah T.</p>
-                  <p className="text-sm text-muted-foreground">App User</p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="p-6">
-                  <p className="mb-4 italic text-muted-foreground">
-                    "We've reduced our food waste by 75% and connected with new customers who now visit regularly."
-                  </p>
-                  <p className="font-semibold">Marco L.</p>
-                  <p className="text-sm text-muted-foreground">Café Owner</p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="p-6">
-                  <p className="mb-4 italic text-muted-foreground">
-                    "muafar has helped our bakery recover costs on items that would have been thrown away at the end of
-                    the day."
-                  </p>
-                  <p className="font-semibold">Aisha K.</p>
-                  <p className="text-sm text-muted-foreground">Bakery Manager</p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
+      
         {/* CTA */}
         <section className="w-full py-12 md:py-24 lg:py-32 bg-primary text-primary-foreground">
           <div className="container px-4 md:px-6">
@@ -323,7 +279,7 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-6">
             <div className="flex items-center space-x-2">
-              <span className="text-xl font-bold">muafar</span>
+              <span className="text-xl font-bold">Muafar</span>
             </div>
             <p className="text-center text-sm text-muted-foreground max-w-md">
               Connecting businesses with consumers to reduce food waste, save money, and help the planet.
@@ -358,7 +314,7 @@ export default function Home() {
               </Link>
             </div>
             <p className="text-xs text-muted-foreground">
-              &copy; {new Date().getFullYear()} muafar. All rights reserved.
+              &copy; {new Date().getFullYear()} Muafar. All rights reserved.
             </p>
           </div>
         </div>
