@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Fugaz_One, Mona_Sans } from 'next/font/google'
 import '@/styles/globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
+import { Analytics } from '@vercel/analytics/react'
 
 export const metadata: Metadata = {
   title: 'Muafar',
@@ -34,6 +35,7 @@ export default function RootLayout({
       <body className={`${monaSans.className} min-h-screen bg-background text-foreground`}>
         <ThemeProvider>
           {children}
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
