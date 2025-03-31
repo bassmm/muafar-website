@@ -34,7 +34,7 @@ export default function Home() {
                 Register Interest <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
-            <p className="text-white/65 text-sm mt-4">Coming soon to iOS and Android</p>
+            <p className="text-white/75 font-fugaz text-sm mt-4">Coming soon to iOS and Android</p>
           </div>
         </section>
 
